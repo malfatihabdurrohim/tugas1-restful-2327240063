@@ -1,0 +1,252 @@
+{
+  "info": {
+    "name": "Tugas1 RESTful - Coffee Orders",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ],
+  "item": [
+    {
+      "name": "GET /",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": []
+        }
+      }
+    },
+    {
+      "name": "1. GET semua data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/coffee-orders",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "coffee-orders"
+          ]
+        }
+      }
+    },
+    {
+      "name": "2. GET satu data (200)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/coffee-orders/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "coffee-orders",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "3. GET id tidak ada (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/coffee-orders/99",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "coffee-orders",
+            "99"
+          ]
+        }
+      }
+    },
+    {
+      "name": "4. GET filter ukuran",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/coffee-orders?ukuran=large",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "coffee-orders"
+          ],
+          "query": [
+            {
+              "key": "ukuran",
+              "value": "large"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "5. POST lengkap (201)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/coffee-orders",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "coffee-orders"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"namaPelanggan\": \"Rani\",\n  \"jenisKopi\": \"Caffe Latte\",\n  \"ukuran\": \"large\",\n  \"jumlah\": 2,\n  \"totalHarga\": 64000\n}"
+        }
+      }
+    },
+    {
+      "name": "6. POST field kosong (400)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/coffee-orders",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "coffee-orders"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"namaPelanggan\": \"\",\n  \"jenisKopi\": \"Caffe Latte\",\n  \"ukuran\": \"large\",\n  \"jumlah\": 2,\n  \"totalHarga\": 64000\n}"
+        }
+      }
+    },
+    {
+      "name": "7. PUT lengkap (200)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/coffee-orders/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "coffee-orders",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"namaPelanggan\": \"Rani\",\n  \"jenisKopi\": \"Caffe Latte\",\n  \"ukuran\": \"medium\",\n  \"jumlah\": 3,\n  \"totalHarga\": 90000\n}"
+        }
+      }
+    },
+    {
+      "name": "8. PUT id tidak ada (404)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/coffee-orders/99",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "coffee-orders",
+            "99"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"namaPelanggan\": \"Rani\",\n  \"jenisKopi\": \"Caffe Latte\",\n  \"ukuran\": \"large\",\n  \"jumlah\": 2,\n  \"totalHarga\": 64000\n}"
+        }
+      }
+    },
+    {
+      "name": "9. DELETE (200)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/coffee-orders/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "coffee-orders",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "10. DELETE id tidak ada (404)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/coffee-orders/99",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "coffee-orders",
+            "99"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Endpoint tidak dikenal (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/ngawur",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "ngawur"
+          ]
+        }
+      }
+    }
+  ]
+}
