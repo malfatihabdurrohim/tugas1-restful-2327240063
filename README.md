@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Nama** | M. Alfatih Abdurrohim |
-| **NIM** | GANTI_DENGAN_NIM |
+| **NIM** | 2327240063 |
 | **Kelas** | SI5B |
 | **Nomor Topik** | 2 - Kafe: Pesanan Kopi |
-| **Link Vercel** | https://tugas1-restful-NIM.vercel.app |
-| **Link GitHub** | https://github.com/USERNAME/tugas1-restful-NIM |
+| **Link Vercel** | https://tugas1-restful-2327240063.vercel.app |
+| **Link GitHub** | https://github.com/USERNAME/tugas1-restful-2327240063 |
 
 ## Cara Menjalankan Lokal
 
