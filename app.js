@@ -1,7 +1,7 @@
 // ============================================================
 // Tugas 1 - RESTful API Murni dengan Express.js
 // Nama   : M. Alfatih Abdurrohim
-// NIM    : GANTI_DENGAN_NIM
+// NIM    : 2327240063
 // Kelas  : SI5B
 // Topik  : 2 - Kafe: Pesanan Kopi (/coffee-orders)
 // ============================================================
@@ -68,7 +68,7 @@ function validasiOrder(body) {
 app.get("/", (req, res) => {
   res.json({
     nama: "M. Alfatih Abdurrohim",
-    nim: "GANTI_DENGAN_NIM",
+    nim: "2327240063",
     kelas: "SI5B",
     nomorTopik: 2,
     topik: "Kafe - Pesanan Kopi",
